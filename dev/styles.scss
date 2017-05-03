@@ -16,6 +16,11 @@ h1 {
 	font-size: 2rem;
 }
 
+h5 {
+	font-size: 1.7rem;
+	margin: 0;
+}
+
 body {
 	max-width: 1200px;
 }
@@ -30,16 +35,24 @@ body {
 
 div.nav__Logo {
 	width: 50%;
+	font-family: 'Playfair Display', serif;
+	display: flex;
+	align-items: center;
+}
+
+.nav__Links--Container {
+	width: 50%;
 }
 
 .nav__Links {
 	display: flex;
 	list-style: none;
+	justify-content: space-between;
+	padding: 0;
 
 
 	a {
 		text-decoration: none;
-		padding: 10px;
 	}
 }
 
@@ -138,4 +151,47 @@ div.nav__Logo {
 .fourPanelGalleryContainer {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.loadButton {
+	text-align: center;
+
+	a {
+		text-decoration: none;
+		border: 1px solid black;
+		padding: 5px;
+	}
+}
+
+.fatWrapper {
+	width: 90%;
+	background: rgba(0,0,0,0.5);
+	margin: 0 auto;
+}
+
+.weddingGallery__Three {
+	display: flex;
+}
+
+.weddingGallery__Three div {
+	width: 33.3%;
+}
+
+.instagram {
+	display: flex;
+}
+
+.instagram__Cell {
+	width: 33.3%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+footer {
+	text-align: center;
+}
+
+.socialMedia {
+	display: flex;
+	justify-content: center;
 }

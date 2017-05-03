@@ -137,6 +137,10 @@ html {
 h1 {
   font-size: 2rem; }
 
+h5 {
+  font-size: 1.7rem;
+  margin: 0; }
+
 body {
   max-width: 1200px; }
 
@@ -148,15 +152,25 @@ body {
   display: flex; }
 
 div.nav__Logo {
+  width: 50%;
+  font-family: 'Playfair Display', serif;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.nav__Links--Container {
   width: 50%; }
 
 .nav__Links {
   display: -ms-flexbox;
   display: flex;
-  list-style: none; }
+  list-style: none;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0; }
   .nav__Links a {
-    text-decoration: none;
-    padding: 10px; }
+    text-decoration: none; }
 
 .hero {
   width: 95%;
@@ -251,3 +265,42 @@ div.nav__Logo {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+
+.loadButton {
+  text-align: center; }
+  .loadButton a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px; }
+
+.fatWrapper {
+  width: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto; }
+
+.weddingGallery__Three {
+  display: -ms-flexbox;
+  display: flex; }
+
+.weddingGallery__Three div {
+  width: 33.3%; }
+
+.instagram {
+  display: -ms-flexbox;
+  display: flex; }
+
+.instagram__Cell {
+  width: 33.3%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+footer {
+  text-align: center; }
+
+.socialMedia {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
