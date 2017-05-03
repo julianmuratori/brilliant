@@ -128,6 +128,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+img {
+  max-width: 100%; }
+
 html {
   font-size: 62.5%; }
 
@@ -198,10 +201,16 @@ div.nav__Logo {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
+.skinnyWrapper {
+  width: 60%;
+  margin: 0 auto; }
+
 .aboutUs {
   display: -ms-flexbox;
   display: flex;
-  margin: 50px 0; }
+  margin: 50px 0;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .aboutUs__Width {
   width: 50%; }
@@ -210,3 +219,35 @@ div.nav__Logo {
   background-image: url("../assets/ariel-lustre-232891.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
+
+.sliderGallery {
+  margin-left: 5%;
+  margin-right: 15%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative; }
+
+.sliderControls {
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .sliderControls div {
+    padding: 7px 10px; }
+
+.sliderCell {
+  position: relative; }
+
+.fourPanelGallery {
+  width: 50%;
+  display: -ms-flexbox;
+  display: flex; }
+
+.fourPanelGalleryContainer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
