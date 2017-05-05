@@ -10,19 +10,91 @@ img {
 
 html {
 	font-size: 62.5%;
+	color: rgb(35,35,35);
+
+	a {
+		color: rgb(35,35,35)
+	}
+}
+
+$fontPrimary: 'Playfair Display', serif;
+$fontSecondary: 'Hind', sans-serif;
+$sectionTitle__Subheading: rgb(172,173,174);
+$weddingGallery: rgba(35,35,35, 0.8);
+
+.sectionTitle {
+	text-align: center;
+	margin: 20px 0;
+	position: relative;
+
+	p {
+		font-family: $fontSecondary;
+		font-style: italic;
+		color: $sectionTitle__Subheading;
+		font-size: 1rem;
+	}
+
+	&:after {
+		content: "";
+		height: 1px;
+		width: 20%;
+		color: black;
+		position: absolute;
+		top: 0;
+	}
+}
+
+p {
+	font-family: $fontSecondary;
+	font-weight: 700;
+	font-size: .7rem;
+	line-height: 1.15rem;
+	// text-align: justify;
 }
 
 h1 {
 	font-size: 2rem;
+	font-family: $fontPrimary;
 }
+
+h2 {
+	font-family: $fontPrimary;
+	font-size: 1.8rem;
+	margin: 0;
+}
+
+h3 {
+	font-family: $fontPrimary;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+h4 {
+	font-family: $fontPrimary;
+	font-style: italic;
+	font-size: 0.8rem;
+	color: $sectionTitle__Subheading;
+}
+
 
 h5 {
 	font-size: 1.7rem;
 	margin: 0;
 }
 
+h6 {
+	font-family: $fontPrimary;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.h6width {
+	width: 100%;
+}
+
 body {
 	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .imgSize {
@@ -58,7 +130,7 @@ div.nav__Logo {
 
 .hero {
 	width: 95%;
-	position: relative;
+	// position: relative;
 }
 
 .heroContainer {
@@ -67,11 +139,12 @@ div.nav__Logo {
 
 .hero__Controls {
 	display: flex;
-	width: 50%;
-	position: absolute;
-	left: 25%;
-	top: 50%;
-	background: rgba(255,255,255,0.5);
+	align-items: center;
+	text-align: center;
+	transform: translateY(-100px);
+	background: rgb(255,255,255);
+	border-radius: 3px;
+
 }
 
 .hero__Controls--25 {
@@ -97,6 +170,30 @@ div.nav__Logo {
 	justify-content: space-between;
 }
 
+.sidebar__Language {
+	display: flex;
+	flex-direction: column;
+	height: 25%;
+}
+
+.sidebar__Pause {
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidebar__Social {
+	height: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.sidebar__Social div {
+	margin: 10px 0;
+}
+
 .skinnyWrapper {
 	width: 60%;
 	margin: 0 auto;
@@ -108,6 +205,19 @@ div.nav__Logo {
 	justify-content: center;
 }
 
+.aboutUs__Text {
+	padding-top: 80px;
+
+	p.subheading {
+		color: $sectionTitle__Subheading;
+		font-style: italic;
+		font-size: 1rem;
+		font-family: $fontPrimary;
+		padding-bottom: 25px;
+		// font-weight: 400;
+	}
+}
+
 .aboutUs__Width {
 	width: 50%;
 }
@@ -116,6 +226,16 @@ div.nav__Logo {
 	background-image: url("../assets/ariel-lustre-232891.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.twoColumns {
+	column-count: 2;
+	font-family: $fontSecondary;
+	line-height: 1.1rem;
+
+	p:first-child {
+		margin-top: 0;
+	}
 }
 
 .sliderGallery {
@@ -132,10 +252,17 @@ div.nav__Logo {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-
+	background: rgba(255,255,255,0.5);
+	// width: 10%;
 
 	div {
-		padding: 7px 10px;
+		width: 50%;
+		display: flex;
+		justify-content: center;
+	}
+
+	a {
+		padding: 20px 25px;
 	}
 }
 
@@ -143,9 +270,55 @@ div.nav__Logo {
 	position: relative;
 }
 
+.sliderGallery__Text {
+	padding: 0 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: justify;
+}
+
 .fourPanelGallery {
 	width: 50%;
 	display: flex;
+
+
+	.width50 {
+		width: 50%;
+		margin: 20px 0;
+	}
+}
+
+.fourPanel__Text {
+	padding: 80px 10px 0px;
+}
+
+.fourPanel__Image1 {
+	background-image: url("../assets/elijah-henderson-56885.jpg");
+	background-size: cover;
+	height: 250px;
+}
+
+.fourPanel__Image2 {
+	background-image: url("../assets/worthy-of-elegance-42266.jpg");
+	background-size: cover;
+	height: 250px;
+}
+
+.fourPanel__Image3 {
+	background-image: url("../assets/eli-defaria-14557.jpg");
+	background-size: cover;
+	height: 250px;
+}
+
+.fourPanel__Image4 {
+	background-image: url("../assets/averie-woodard-142413.jpg");
+	background-size: cover;
+	height: 250px;
+}
+
+.translateDown {
+	transform: translateY(50px);
 }
 
 .fourPanelGalleryContainer {
@@ -153,38 +326,138 @@ div.nav__Logo {
 	flex-wrap: wrap;
 }
 
+.fourPanelPadding {
+	padding: 0 2.5px 5px;
+}
+
+
+
 .loadButton {
 	text-align: center;
+	margin: 40px 0;
 
 	a {
 		text-decoration: none;
 		border: 1px solid black;
-		padding: 5px;
+		padding: 5px 25px;
 	}
 }
 
 .fatWrapper {
 	width: 90%;
-	background: rgba(0,0,0,0.5);
 	margin: 0 auto;
+}
+
+.weddingBackground {
+	background: $weddingGallery;
+}
+
+.weddingTitle {
+
+	h2 {
+		color: white;
+		font-weight: normal;
+	}
+
+	p {
+		color: white;
+	}
+}
+
+.weddingGallery {
+	padding: 1px 0 35px;
 }
 
 .weddingGallery__Three {
 	display: flex;
+	justify-content: space-between;
 }
 
 .weddingGallery__Three div {
-	width: 33.3%;
+	width: calc(33.3% - 5px);
+	height: 150px;
 }
+
+.weddingGallery__Cell1 {
+	background: url("../assets/wedding1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.weddingGallery__Cell2 {
+	background: url("../assets/wedding2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.weddingGallery__Cell3 {
+	background: url("../assets/wedding5.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.weddingGallery__OneWide {
+	background-image: url("../assets/wedding_wide.jpg");
+	background-size: cover;
+	height: 150px;
+	background-position: center;
+	margin-top: 10px;
+}
+
 
 .instagram {
 	display: flex;
+	margin: 50px auto;
+	height: 200px;
 }
 
 .instagram__Cell {
 	width: 33.3%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+
+	h2 {
+		margin: 0;
+	}
+}
+
+
+.backgroundCenter {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: calc(50% - 10px);
+	margin: 5px;
+}
+
+.instagram__Gallery1 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+
+.instagram__Gallery2 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+
+.instagram__Gallery3 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+
+.instagram__Gallery4 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+.instagram__Gallery5 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+.instagram__Gallery6 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+.instagram__Gallery7 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
+}
+.instagram__Gallery8 {
+	background-image: url("../assets/brooke-cagle-39568.jpg");
 }
 
 footer {

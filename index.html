@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="./public/styles/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Hind|Playfair+Display" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,700|Playfair+Display:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -31,25 +31,6 @@
 					<img src="./public/assets/brooke-cagle-39573.jpg" class="imgSize" alt="">
 				</div>
 				<!-- for the main hero image -->
-				<div class="hero__Controls">
-				<!-- for the floating text and slider controls -->
-					<div class="hero__Controls--25">
-						<h6>Fashion Photo</h6>
-					</div>
-
-					<div class="hero__Controls--50">
-						<h1>A picture is a secret about a secret.</h1>
-					</div>
-
-					<div class="hero__Controls--25">
-						<div>
-							<a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-						</div>
-						<div>
-							<a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="sidebar">
 				<!-- sidebar -->
@@ -60,11 +41,30 @@
 				<div class="sidebar__Pause">
 					<i class="fa fa-pause" aria-hidden="true"></i>
 				</div>
-				<div class="sideBar__Social">
+				<div class="sidebar__Social">
 					<div><i class="fa fa-instagram" aria-hidden="true"></i></div>
 					<div><i class="fa fa-twitter" aria-hidden="true"></i></div>
 					<div><i class="fa fa-facebook" aria-hidden="true"></i></div>
 					<div><i class="fa fa-google-plus-official" aria-hidden="true"></i></div>
+				</div>
+			</div>
+		</div>
+		<div class="hero__Controls skinnyWrapper">
+		<!-- for the floating text and slider controls -->
+			<div class="hero__Controls--25">
+				<h6 class="h6width">Fashion Photo</h6>
+			</div>
+
+			<div class="hero__Controls--50">
+				<h1>A picture is a secret about a secret.</h1>
+			</div>
+
+			<div class="hero__Controls--25">
+				<div>
+					<a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				</div>
+				<div>
+					<a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
@@ -77,9 +77,9 @@
 				<!-- about us text containers -->
 					<div>
 						<h2>About Me</h2>
-						<p>You don't take a photograph, you make it.</p>
+						<p class="subheading">You don't take a photograph, you make it.</p>
 					</div>
-					<div>
+					<div class="twoColumns">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur aperiam nam animi delectus maiores vero odio quisquam, officia facere nesciunt illo non et saepe suscipit dolores consectetur id porro.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur omnis autem adipisci odit eum at, officia, dicta, culpa id quisquam ex deleniti, tempora nam nulla. Tempora libero dolorem deserunt officiis!</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque numquam, vero error facilis dignissimos. Dolore soluta inventore quod modi veritatis doloribus, tempore quisquam quaerat iste necessitatibus qui maiores, dolores sunt.</p>
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 
-			<div>
+			<div class="sliderGallery__Text">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat id aspernatur odio similique ex delectus perspiciatis quos fugit totam illum blanditiis, recusandae nostrum itaque maxime assumenda dicta sunt est deserunt.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ratione et sit ab! Aspernatur ut dignissimos quidem sunt alias, laudantium sint, id magnam amet nulla cupiditate. Aliquam impedit dolor explicabo!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, perspiciatis culpa molestias repudiandae beatae tenetur natus suscipit sit aspernatur aperiam voluptas ipsa fuga, modi recusandae omnis, possimus, odio nihil. Laboriosam!</p>
@@ -125,11 +125,10 @@
 				<!-- main gallery container -->
 					<div class="fourPanelGallery">
 					<!-- gallery containers -->
-						<div>
+						<div class="fourPanel__Image1 width50">
 						<!-- image containers -->
-							<img src="./public/assets/elijah-henderson-56885.jpg" alt="">
 						</div>
-						<div>
+						<div class="fourPanel__Text width50">
 						<!-- text containers -->
 							<h4>Lifestyle</h4>
 							<h3>The camera would miss it all. A magnficent picture is never worth...</h3>
@@ -138,41 +137,38 @@
 					</div>
 					<div class="fourPanelGallery">
 					<!-- gallery containers -->
-						<div>
-						<!-- image containers -->
-							<img src="./public/assets/worthy-of-elegance-42266.jpg" alt="">
+						<div class="fourPanel__Image2  width50 translateDown">
 						</div>
-						<div>
+						<div class="fourPanel__Text width50">
 						<!-- text containers -->
 							<h4>Inspire</h4>
 							<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nesciunt.</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis impedit, vel officia consequatur modi, repudiandae temporibus dolores doloremque, distinctio, quod deleniti labore aliquam at illum.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis impedit, vel officia consequatur modi, repudiandae temporibus dolores doloremque.</p>
 						</div>
 					</div>
 					<div class="fourPanelGallery">
 					<!-- gallery containers -->
-						<div>
+						<div class="fourPanel__Image3 width50">
 						<!-- image containers -->
-							<img src="./public/assets/averie-woodard-142413.jpg" alt="">
 						</div>
-						<div>
+						<div class="fourPanel__Text width50">
 						<!-- text containers -->
 							<h4>Technology</h4>
 							<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, alias corrupti fuga!</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nostrum quidem, cumque amet sequi. Quasi porro, esse quaerat ipsam veritatis nisi id, voluptas obcaecati sed expedita laborum quod sapiente architecto enim ducimus.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nostrum quidem, cumque amet sequi. Lorem ipsum dolor sit.</p>
 						</div>
 					</div>
 					<div class="fourPanelGallery">
 					<!-- gallery containers -->
-						<div>
+						<div class="fourPanel__Image4  width50 translateDown">
 						<!-- image containers -->
-							<img src="./public/assets/eli-defaria-14557.jpg" alt="">
+
 						</div>
-						<div>
+						<div class="fourPanel__Text width50">
 						<!-- text containers -->
 							<h4>Fashion</h4>
 							<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, praesentium minus velit.</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, praesentium illum unde cum exercitationem, quasi enim eveniet tenetur minima soluta rem, consequatur minus laboriosam itaque.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, praesentium illum unde cum exercitationem, quasi enim eveniet tenetur minima soluta rem.</p>
 						</div>
 					</div>
 				</div>
@@ -182,27 +178,27 @@
 			</section>
 		</div>
 
-		<section class="weddingGallery fatWrapper">
+		<section class="weddingGallery fatWrapper weddingBackground">
 			<div class="skinnyWrapper">
-				<div class="sectionTitle">
+				<div class="sectionTitle weddingTitle">
 					<h2>Wedding Photography</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, odio.</p>
 				</div>
 				<div class="weddingGallery__Three">
 				<!-- three images -->
-					<div class="weddingGallery__Cell">
-						<img src="./public/assets/wedding1.jpg" alt="">
+					<div class="weddingGallery__Cell1">
+						<!-- <img src="./public/assets/wedding1.jpg" alt=""> -->
 					</div>
-					<div class="weddingGallery__Cell">
-						<img src="./public/assets/wedding2.jpg" alt="">
+					<div class="weddingGallery__Cell2">
+						<!-- <img src="./public/assets/wedding2a.jpg" alt=""> -->
 					</div>
-					<div class="weddingGallery__Cell">
-						<img src="./public/assets/wedding5.jpg" alt="">
+					<div class="weddingGallery__Cell3">
+						<!-- <img src="./public/assets/wedding5.jpg" alt=""> -->
 					</div>
 				</div>
 				<div class="weddingGallery__OneWide">
 					<!-- one long image -->
-					<img src="./public/assets/wedding_wide.jpg" alt="">
+					<!-- <img src="./public/assets/wedding_wide.jpg" alt=""> -->
 				</div>
 			</div>
 		</section>
@@ -214,32 +210,32 @@
 			</div>
 
 			<div class="fourPanelGalleryContainer">
-				<div class="fourPanelGallery">
+				<div class="fourPanelGallery fourPanelPadding">
 					<div>
 						<img src="./public/assets/wedding4.jpg" alt="">
 					</div>
 				</div>
 
-				<div class="fourPanelGallery">
+				<div class="fourPanelGallery fourPanelPadding">
 					<div>
 						<img src="public/assets/samuel-dixon-119943.jpg" alt="">
 					</div>
 				</div>
 
-				<div class="fourPanelGallery">
+				<div class="fourPanelGallery fourPanelPadding">
 					<div>
 						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
 					</div>
 				</div>
 
-				<div class="fourPanelGallery">
+				<div class="fourPanelGallery fourPanelPadding">
 					<div>
 						<img src="public/assets/allef-vinicius-151778.jpg" alt="">
 					</div>
 				</div>
 			</div>
 
-			<div>
+			<div class="fourPanelPadding">
 				<img src="public/assets/larm-rmah-152446.jpg" alt="">
 			</div>
 
@@ -248,24 +244,24 @@
 		<section class="instagram skinnyWrapper">
 			<div class="instagram__Cell">
 				<!-- four image gallery left -->
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery fourPanelPadding instagram__Gallery1 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery fourPanelPadding instagram__Gallery2 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery fourPanelPadding instagram__Gallery3 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery fourPanelPadding instagram__Gallery4 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
 			</div>
@@ -276,24 +272,24 @@
 			</div>
 			<div class="instagram__Cell">
 				<!-- four image gallery right -->
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery instagram__Gallery5 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery instagram__Gallery6 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery instagram__Gallery7 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
-				<div class="fourPanelGallery instagram__Gallery">
+				<div class="fourPanelGallery instagram__Gallery8 backgroundCenter">
 					<div>
-						<img src="public/assets/brooke-cagle-39568.jpg" alt="">
+						<!-- <img src="public/assets/brooke-cagle-39568.jpg" alt=""> -->
 					</div>
 				</div>
 			</div>
