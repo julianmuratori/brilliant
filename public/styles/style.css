@@ -149,10 +149,12 @@ html {
   .sectionTitle:after {
     content: "";
     height: 1px;
-    width: 20%;
-    color: black;
+    width: 200px;
     position: absolute;
-    top: 0; }
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid black; }
 
 p {
   font-family: "Hind", sans-serif;
@@ -417,7 +419,10 @@ div.nav__Logo {
   .loadButton a {
     text-decoration: none;
     border: 1px solid black;
-    padding: 5px 25px; }
+    padding: 5px 25px;
+    transition: all 1s ease; }
+  .loadButton:hover {
+    text-decoration: line-through; }
 
 .fatWrapper {
   width: 90%;
@@ -473,6 +478,9 @@ div.nav__Logo {
   display: flex;
   margin: 50px auto;
   height: 200px; }
+
+.instagram__Background {
+  background: #faf8f7; }
 
 .instagram__Cell {
   width: 33.3%;
@@ -544,3 +552,80 @@ footer {
       justify-content: center; }
   .brillianBox h5 {
     transform: rotate(-45deg); }
+
+.heroBottom {
+  height: 75px;
+  background: #faf8f7; }
+
+.blog__Header {
+  width: 75%;
+  margin: 0 auto; }
+
+.blog__HeaderColor {
+  background: #faf8f7; }
+
+.blogText {
+  padding: 25px 0; }
+
+.blog__Entry {
+  background-image: url("../assets/larm-rmah-152446.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 225px 50px 50px; }
+
+.entryName, .entrySocial {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: white;
+  width: 75%;
+  margin: 0 auto; }
+
+.galleryNav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 50px; }
+
+.blogGallery {
+  transform: translateY(-90px); }
+
+.entryName__Cell {
+  padding: 0px 5px;
+  margin: 10px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+  .entryName__Cell:nth-child(2) {
+    border: 1px solid black; }
+
+.entrySocial__Cell {
+  padding: 0 7px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .entrySocial__Cell p {
+    margin-left: 5px; }
+  .entrySocial__Cell i {
+    color: grey; }
+
+.galleryNav a {
+  text-decoration: none;
+  padding-top: 7px;
+  transition: all .4s ease;
+  border-top: 2px solid white; }
+  .galleryNav a:hover {
+    border-top: 2px solid black; }
+
+.galleryNav__Digits a {
+  padding: 7px 5px;
+  margin: 0 3px; }

@@ -13,7 +13,7 @@ html {
 	color: rgb(35,35,35);
 
 	a {
-		color: rgb(35,35,35)
+		color: rgb(35,35,35);
 	}
 }
 
@@ -37,10 +37,12 @@ $weddingGallery: rgba(35,35,35, 0.8);
 	&:after {
 		content: "";
 		height: 1px;
-		width: 20%;
-		color: black;
+		width: 200px;
 		position: absolute;
-		top: 0;
+		bottom: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-bottom: 1px solid black;
 	}
 }
 
@@ -340,6 +342,11 @@ div.nav__Logo {
 		text-decoration: none;
 		border: 1px solid black;
 		padding: 5px 25px;
+		transition: all 1s ease;
+	}
+
+	&:hover {
+		text-decoration: line-through;
 	}
 }
 
@@ -409,6 +416,10 @@ div.nav__Logo {
 	display: flex;
 	margin: 50px auto;
 	height: 200px;
+}
+
+.instagram__Background {
+	background: rgb(250,248,247);
 }
 
 .instagram__Cell {
@@ -487,4 +498,94 @@ footer {
 	h5 {
 		transform: rotate(-45deg);
 	}
+}
+
+
+// BLOG STYLING
+
+.heroBottom {
+	height: 75px;
+	background: rgb(250,248,247);
+}
+
+.blog__Header {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.blog__HeaderColor {
+	background: rgb(250,248,247);
+}
+
+.blogText {
+	padding: 25px 0;
+}
+
+.blog__Entry {
+	background-image: url('../assets/larm-rmah-152446.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	padding: 225px 50px 50px;
+}
+
+.entryName, .entrySocial {
+	display: flex;
+	justify-content: center;
+	background: white;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.galleryNav {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.blogGallery {
+	transform: translateY(-90px);
+}
+
+.entryName__Cell {
+	padding: 0px 5px;
+	margin: 10px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+
+	&:nth-child(2) {
+		border: 1px solid black;
+	}
+}
+
+.entrySocial__Cell {
+	padding: 0 7px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	p {
+		margin-left: 5px;
+	}
+
+	i {
+		color: grey;
+	}
+}
+
+.galleryNav a {
+	text-decoration: none;
+	padding-top: 7px;
+	transition: all .4s ease;
+	border-top: 2px solid white;
+
+	&:hover {
+		border-top: 2px solid black;
+	}
+}
+.galleryNav__Digits a {
+	padding: 7px 5px;
+	margin: 0 3px;
 }
