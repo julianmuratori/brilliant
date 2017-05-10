@@ -39,7 +39,6 @@ $weddingGallery: rgba(35,35,35, 0.8);
 		height: 1px;
 		width: 200px;
 		position: absolute;
-		bottom: 15px;
 		left: 50%;
 		transform: translateX(-50%);
 		border-bottom: 1px solid black;
@@ -105,6 +104,10 @@ body {
 
 .nav {
 	display: flex;
+
+	.hamburger {
+		display: none;
+	}
 }
 
 div.nav__Logo {
@@ -112,6 +115,7 @@ div.nav__Logo {
 	font-family: 'Playfair Display', serif;
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 
 .nav__Links--Container {
@@ -139,6 +143,10 @@ div.nav__Logo {
 	display: flex;
 }
 
+.carousel-cell {
+	width: 100%;
+}
+
 .hero__Controls {
 	display: flex;
 	align-items: center;
@@ -162,6 +170,20 @@ div.nav__Logo {
 
 .hero__Controls--50 {
 	width: 60%;
+}
+
+.sidebar__Pause {
+	position: relative;
+}
+
+.play {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+a.invisible {
+	display: none;
 }
 
 .sidebar {
@@ -203,12 +225,13 @@ div.nav__Logo {
 
 .aboutUs {
 	display: flex;
-	margin: 50px 0;
+	margin: 0 0 50px;
 	justify-content: center;
 }
 
 .aboutUs__Text {
 	padding-top: 80px;
+	padding-right: 20px;
 
 	p.subheading {
 		color: $sectionTitle__Subheading;
@@ -253,7 +276,7 @@ div.nav__Logo {
 	display: flex;
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	left: 0;
 	background: rgba(255,255,255,0.5);
 	// width: 10%;
 
@@ -270,14 +293,43 @@ div.nav__Logo {
 
 .sliderCell {
 	position: relative;
+	width: 80%;
+
+	.cell1 {
+		background: url('../assets/jake-young-168589.jpg');
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+
+	.cell2 {
+		background: url('../assets/eli-defaria-14557.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+	.cell3 {
+		background: url('../assets/elijah-henderson-56885.jpg');
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
 }
 
 .sliderGallery__Text {
-	padding: 0 15px;
+	padding: 100px 15px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	text-align: justify;
+	width: 20%;
+}
+
+.photoNews {
+	margin-top: 50px;
 }
 
 .fourPanelGallery {
@@ -372,7 +424,7 @@ div.nav__Logo {
 }
 
 .weddingGallery {
-	padding: 1px 0 35px;
+	padding: 1px 0 50px;
 }
 
 .weddingGallery__Three {
@@ -411,6 +463,10 @@ div.nav__Logo {
 	margin-top: 10px;
 }
 
+.previousWork {
+	margin-top: 50px;
+}
+
 
 .instagram {
 	display: flex;
@@ -433,6 +489,8 @@ div.nav__Logo {
 	h2 {
 		margin: 10px 0 0;
 		width: 85%;
+		position: relative;
+		z-index: 10;
 	}
 }
 
@@ -446,31 +504,31 @@ div.nav__Logo {
 }
 
 .instagram__Gallery1 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/larm-rmah-152446.jpg");
 }
 
 .instagram__Gallery2 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/worthy-of-elegance-42266.jpg");
 }
 
 .instagram__Gallery3 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/allef-vinicius-151778.jpg");
 }
 
 .instagram__Gallery4 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/ariel-lustre-232891.jpg");
 }
 .instagram__Gallery5 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/elijah-henderson-56885.jpg");
 }
 .instagram__Gallery6 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/luiza-sayfullina-232545.jpg");
 }
 .instagram__Gallery7 {
 	background-image: url("../assets/brooke-cagle-39568.jpg");
 }
 .instagram__Gallery8 {
-	background-image: url("../assets/brooke-cagle-39568.jpg");
+	background-image: url("../assets/brooke-cagle-39376.jpg");
 }
 
 footer {
@@ -480,6 +538,10 @@ footer {
 .socialMedia {
 	display: flex;
 	justify-content: center;
+
+	div {
+		margin: 5px;
+	}
 }
 
 
@@ -490,7 +552,7 @@ footer {
 	transform: rotate(45deg);
 	width: 130px;
 	height: 130px;
-	box-shadow: 0px 0px 10px 1px rgba(219,215,219,1);
+	box-shadow: 0px 0px 10px 5px rgba(243,243,243,1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -588,4 +650,271 @@ footer {
 .galleryNav__Digits a {
 	padding: 7px 5px;
 	margin: 0 3px;
+}
+
+// contact page
+
+.contactFlex {
+	width: 50%;
+}
+
+.contactContainer {
+	display: flex;
+}
+
+.contactForm {
+	padding: 50px 20px;
+	// display: flex;
+
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	input {
+		width: calc(50% - 10px);
+		background: rgba(0,0,0,0);
+		border: none;
+		border-bottom: 1px solid black;
+		padding: 0;
+		margin: 5px;
+	}
+
+	input:nth-child(3) {
+		width: 100%;
+	}
+}
+
+
+@media all and (max-width: 740px) {
+	.aboutUs__Image {
+		background-position: center;
+	}
+
+	.sliderGallery {
+		flex-wrap: wrap;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.sliderControls {
+		display: none;
+	}
+	.sliderCell {
+		width: 100%;
+		min-height: 400px;
+	}
+	.sliderGallery__Text {
+		padding-top: 30px;
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.fourPanelGallery {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.fourPanel-flip {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.photoNews {
+		.loadButton {
+			margin-top: 20px;
+		}
+	}
+
+	.translateDown {
+		transform: translateY(0);
+	}
+
+	.previousWork {
+		.fourPanelGallery {
+			width: 50%;
+		}
+	}
+
+	.instagram.skinnyWrapper {
+		width: 100%;
+
+		.brillianBox {
+			width: 130px;
+			margin: 0 auto;
+		}
+	}
+
+	.instagram__Cell div {
+		margin: 10px;
+		width: calc(50% - 20px);
+	}
+
+}
+
+@media all and (max-width: 500px) {
+
+
+	.aboutUs {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		align-items: center;
+		// justify-content: center;
+	}
+	.aboutUs__Width {
+		width: 80%;
+	}
+
+	.aboutUs__Image {
+		min-height: 175px;
+		background-position: top;
+	}
+
+	.aboutUs__Text {
+		margin-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-right: 0;
+	}
+
+	.sliderGallery__Text {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+
+		p {
+			width: calc(33.3% - 20px);
+			margin: 0 10px;
+		}
+	}
+
+	.photoNews .fourPanelGallery {
+		display: flex;
+		flex-wrap: wrap;
+
+		.width50 {
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+
+	.fourPanel__Text {
+		padding-top: 0;
+	}
+
+	.weddingGallery__Three {
+		flex-wrap: wrap;
+	}
+	.weddingGallery__Three div {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.instagram {
+		flex-direction: column;
+		height: auto;
+
+		.instagram__Cell:nth-child(1), .instagram__Cell:nth-child(3) {
+			width: 60%;
+			margin: 0 auto;
+			order: 2;
+		}
+
+		.instagram__Cell:nth-child(2) {
+			margin: 10px 0;
+			order: 1;
+		}
+
+		.instagram__Cell {
+			width: 100%;
+			min-height: 200px;
+
+			div {
+				margin: 10px;
+				width: calc(50% - 20px);
+			}
+
+			.brillianBox {
+				width: 130px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.nav {
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	div.nav__Logo {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		.hamburger {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			color: black;
+			transition: all 1s ease;
+			padding: 2px 5px;
+		}
+	}
+
+	.hero__Controls {
+		background: rgba(255,255,255,0.6);
+	}
+
+	.sidebar__Social div {
+		margin: 5px 0;
+	}
+
+	.nav__Links--Container {
+		width: 25%;
+		position: absolute;
+		z-index: 10;
+		transition: all 1s ease;
+
+		a {
+			color: white;
+		}
+}
+	.offMenu {
+		top: -147px;
+		right: 0;
+	}
+	.onMenu {
+		background: $weddingGallery;
+		top: 0;
+		right: 0;
+	}
+
+	.offButton {
+		top: 2px;
+	}
+
+	.onButton {
+		top: 147px;
+		background: white;
+	}
+
+	.nav__Links {
+		flex-direction: column;
+
+		li {
+			margin: 5px 0;
+			padding-left: 5px;
+		}
+
+		li:nth-child(1) {
+			margin-top: 0;
+		}
+
+	}
+
+	.on {
+		top: 0;
+	}
 }

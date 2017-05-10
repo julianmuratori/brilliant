@@ -3,18 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,700|Playfair+Display:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
 	<header>
 		<nav class="nav fatWrapper">
 			<div class="nav__Logo">
 				<h5>Brillian.</h5>
+													<a href="" class="hamburger"><i class="fa fa-bars"></i></a>
 			</div>
 
-			<div class="nav__Links--Container">
+			<div class="nav__Links--Container offMenu">
 				<ul class="nav__Links">
 					<li><a href="">Home</a></li>
 					<li><a href="">Portfolio</a></li>
@@ -26,10 +29,16 @@
 			</div>
 		</nav>
 		<div class="heroContainer">
-			<div class="hero">
-				<div class="hero__Image">
+			<div class="hero main-carousel">
+				<div class="hero__Image carousel-cell">
 					<img src="./public/assets/brooke-cagle-39573.jpg" class="imgSize" alt="">
 				</div>
+					<div class="hero__Image carousel-cell">
+						<img src="./public/assets/luiza-sayfullina-232545.jpg" class="imgSize" alt="">
+					</div>
+						<div class="hero__Image carousel-cell">
+							<img src="./public/assets/allef-vinicius-151778.jpg" class="imgSize" alt="">
+						</div>
 				<!-- for the main hero image -->
 			</div>
 			<div class="sidebar">
@@ -39,13 +48,18 @@
 					<a href="">RO</a>
 				</div>
 				<div class="sidebar__Pause">
-					<i class="fa fa-pause" aria-hidden="true"></i>
+					<a href="" class="pause">
+						<i class="fa fa-pause pauseButton" aria-hidden="true"></i>
+					</a>
+					<a href="" class="play invisible">
+						<i class="fa fa-play playButton"></i>
+					</a>
 				</div>
 				<div class="sidebar__Social">
-					<div><i class="fa fa-instagram" aria-hidden="true"></i></div>
-					<div><i class="fa fa-twitter" aria-hidden="true"></i></div>
-					<div><i class="fa fa-facebook" aria-hidden="true"></i></div>
-					<div><i class="fa fa-google-plus-official" aria-hidden="true"></i></div>
+					<div><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+					<div><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+					<div><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+					<div><a href=""><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></div>
 				</div>
 			</div>
 		</div>
@@ -61,10 +75,10 @@
 
 			<div class="hero__Controls--25">
 				<div>
-					<a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a href="" class="backSlide"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
 				</div>
 				<div>
-					<a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<a href="" class="forwardSlide"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
@@ -95,16 +109,18 @@
 		</section>
 
 		<section class="sliderGallery">
-			<div class="sliderCell">
+			<div class="sliderCell carousel">
 				<!-- image container -->
-				<img src="./public/assets/brooke-cagle-39376.jpg" class="imgSize" alt="">
-				<div class="sliderControls">
-					<div>
-						<a href=""><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-					</div>
-					<div>
-						<a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-					</div>
+				<div class="carousel-cell cell1"></div>
+				<div class="carousel-cell cell2"></div>
+				<div class="carousel-cell cell3"></div>
+			</div>
+			<div class="sliderControls">
+				<div>
+					<a href="" class="aboutUs-Back"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				</div>
+				<div>
+					<a href="" class="aboutUs-forward"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 				</div>
 			</div>
 
@@ -123,7 +139,7 @@
 				</div>
 				<div class="fourPanelGalleryContainer">
 				<!-- main gallery container -->
-					<div class="fourPanelGallery">
+					<div class="fourPanelGallery fourPanel-flip">
 					<!-- gallery containers -->
 						<div class="fourPanel__Image1 width50">
 						<!-- image containers -->
@@ -146,7 +162,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis impedit, vel officia consequatur modi, repudiandae temporibus dolores doloremque.</p>
 						</div>
 					</div>
-					<div class="fourPanelGallery">
+					<div class="fourPanelGallery fourPanel-flip">
 					<!-- gallery containers -->
 						<div class="fourPanel__Image3 width50">
 						<!-- image containers -->
@@ -301,11 +317,17 @@
 	<footer>
 		<p>COPYRIGHT 2017 BRILLIAN</p>
 		<div class="socialMedia">
-			<div><i class="fa fa-facebook"></i></div>
-			<div><i class="fa fa-instagram"></i></div>
-			<div><i class="fa fa-twitter"></i></div>
-			<div><i class="fa fa-google-plus-official"></i></div>
+			<div><a href=""><i class="fa fa-facebook"></i></a></div>
+			<div><a href=""><i class="fa fa-instagram"></i></a></div>
+			<div><a href=""><i class="fa fa-twitter"></i></a></div>
+			<div><a href=""><i class="fa fa-google-plus-official"></i></a></div>
 		</div>
 	</footer>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="./public/script.js"></script>
 </body>
 </html>
